@@ -24,17 +24,10 @@ pipeline
     }
     stage("message")
     {
-      when
-      {
-        expression
-        {
-          echo "choice"
-          echo "${file}"
-        }
-      }
       steps
       {
         echo "executed"
+        echo "${file}
       }
     }
   }
