@@ -1,34 +1,31 @@
-pipeline
-{
+def gv
+
+pipeline {
   agent any
-  parameters
-  {
-    choice(name:"file", choices: ["1.0","2.0","3.0"], description: "")
-    booleanParam(name:"helo",defaultValue: true, description: "")
-  }
-  stages
-  {
-    stage("program")
-    {
-      when
-      {
-        expression
+    stages{
+          stage("init")
+          {
+            steps
+            {
+                script
+                {
+                gv=load "nara.groovy"
+                gv.build()
+                }
+            }
+          }
+
+      stage("build")
         {
-          params.helo
+          steps
+          {
+            script
+            {
+            gv.build()
+            }
+
+          }
+
         }
-      }
-      steps
-      {
-        echo "hi"
-      }
     }
-    stage("message")
-    {
-      steps
-      {
-        echo "executed"
-        echo "${file}"
-      }
-    }
-  }
 }
