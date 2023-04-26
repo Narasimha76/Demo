@@ -7,10 +7,8 @@ pipeline
     {
       when
       {
-        expression
-        {
           env.BRANCH_NAME == 'main'
-        }
+   
       }
       steps
       {
