@@ -7,7 +7,7 @@ pipeline
     {
       when
       {
-          env.BRANCH_NAME == 'main'
+          branch "main"
    
       }
       steps
