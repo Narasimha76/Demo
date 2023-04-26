@@ -27,7 +27,7 @@ pipeline
       steps
       {
         echo "executed"
-        echo "${file}
+        echo "${file}"
       }
     }
   }
