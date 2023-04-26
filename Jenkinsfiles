@@ -5,7 +5,6 @@ pipeline
   {
     stage("program")
     {
-stage('Deploy to dev'){
         when{
             beforeAgent true
             anyOf{
