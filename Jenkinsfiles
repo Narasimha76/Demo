@@ -14,7 +14,7 @@ pipeline
       {
         expression
         {
-          Params.helo
+          params.helo
         }
       }
       steps
