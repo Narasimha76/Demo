@@ -28,6 +28,7 @@ pipeline
       {
         echo "executed"
         echo "${file}"
+        sh "python ${file}"
       }
     }
   }
