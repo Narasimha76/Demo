@@ -1,16 +1,21 @@
 pipeline
 {
   agent any
+  environment 
+  {
+    BRANCH_NAME == 'main'
+  }
   stages
   {
     stage("program")
     {
-        when{
-            beforeAgent true
-            anyOf{
-                branch "main"
-            }
+      when
+      {
+        expression
+        {
+          BRANCH_NAME == 'main'
         }
+      }
       steps
       {
         echo "hi"
