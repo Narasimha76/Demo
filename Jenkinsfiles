@@ -5,9 +5,14 @@ pipeline
   {
     stage("program")
     {
+       when {
+      expression {
+        BRANCH_NAME == 'main'
+      }
+    }
       steps
       {
-        sh "python app.py"
+        echo "hi"
       }
     }
     stage("message")
