@@ -5,11 +5,13 @@ pipeline
   {
     stage("program")
     {
-      when
-      {
-          branch "main"
-   
-      }
+stage('Deploy to dev'){
+        when{
+            beforeAgent true
+            anyOf{
+                branch "main"
+            }
+        }
       steps
       {
         echo "hi"
