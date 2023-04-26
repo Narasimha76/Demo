@@ -4,7 +4,7 @@ pipeline
   parameters
   {
     choice(name:"file", choices: ["1.0","2.0","3.0","app.py"], description: "")
-    booleanParam(name:"helo",defaultvalue: true, description: "")
+    booleanParam(name:"helo",defaultValue: true, description: "")
   }
   stages
   {
