@@ -3,7 +3,7 @@ pipeline
   agent any
   parameters
   {
-    choice(name:"file", choice: ["1.0","2.0","3.0","app.py"], description: "")
+    choice(name:"file", choices: ["1.0","2.0","3.0","app.py"], description: "")
     booleanparam(name:"helo",defaultvalue: true, description: "")
   }
   stages
